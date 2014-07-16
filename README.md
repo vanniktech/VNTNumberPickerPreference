@@ -31,6 +31,11 @@ Also you need a file under `res/values` called `attrs.xml` with the following co
 
 Afterwards you are good to go and can run your project!
 
+# Get font size
+
+    final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    final int fonftSize = sharedPreferences.getInt("preference_font_size", this.getResources().getInteger(R.integer.font_size_default_value));
+
 # Preview
 
 ![Image of VNTNumberPickerPreference](res/drawable/preview.png)

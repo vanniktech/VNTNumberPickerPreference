@@ -17,7 +17,9 @@
 package com.vanniktech.vntnumberpickerpreference;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.Menu;
@@ -33,6 +35,11 @@ public class MainActivity extends Activity {
 		final TextView checkItOutOnGitHubTextView = (TextView) this.findViewById(R.id.check_it_out_on_github);
 		checkItOutOnGitHubTextView.setMovementMethod(LinkMovementMethod.getInstance());
 		checkItOutOnGitHubTextView.setText(Html.fromHtml(this.getString(R.string.check_it_out_on_github)));
+
+		final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		final TextView bodySizeTextView = (TextView) this.findViewById(R.id.body_size);
+		bodySizeTextView.setTextSize(sharedPreferences.getInt("preference_font_size", this.getResources().getInteger(R.integer.font_size_default_value)));
+		bodySizeTextView.setText(this.getString(R.string.body_size).concat(" - " + String.valueOf(sharedPreferences.getInt("preference_body_size", 180))));
 	}
 
 	@Override
