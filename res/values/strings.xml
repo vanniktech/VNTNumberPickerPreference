@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VNTNumberPickerPreference</string>
+    <string name="action_settings">Settings</string>
+    <string name="font_size">Font size</string>
+    <string name="body_size">Body size</string>
+    <string name="preview_content_description">Preview of VNTNumberPickerPreference</string>
+    <string name="check_it_out_on_github">&lt;a href="https://github.com/vanniktech/VNTNumberPickerPreference">Check it out on GitHub&lt;/a></string>
+
+    <item name="font_size_default_value" type="integer">25</item>
+    <item name="font_size_min_value" type="integer">8</item>
+    <item name="font_size_max_value" type="integer">100</item>
+
+</resources>

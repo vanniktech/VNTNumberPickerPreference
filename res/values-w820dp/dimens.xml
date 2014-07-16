@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="padding">64dp</dimen>
+
+</resources>
