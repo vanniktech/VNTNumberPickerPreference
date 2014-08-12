@@ -5,7 +5,7 @@ This is an easy to use custom preference, which opens a dialog with a number pic
 
 ```xml
 <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
-    xmlns:vntnumberpickerpreference="http://schemas.android.com/apk/res/com.vanniktech.vntnumberpickerpreference"
+    xmlns:vntnumberpickerpreference="http://schemas.android.com/apk/res-auto"
     android:defaultValue="@integer/font_size_default_value"
     android:key="preference_font_size"
     android:title="@string/font_size"
@@ -15,39 +15,33 @@ This is an easy to use custom preference, which opens a dialog with a number pic
 
 # Setup
 
-To get this working in your project, make sure to copy the `VNTNumberPickerPreference` class.
+**settings.gradle**
 
-Afterwards to go your preference XML file and copy the above mentioned XML tag. You may need to modifiy the package description, depending on where you have copied the file.
-
-The declaration of the custom resource id `vntnumberpickerpreference` happens with `xmlns:vntnumberpickerpreference="http://schemas.android.com/apk/res/com.vanniktech.vntnumberpickerpreference"`. Make sure you replace `com.vanniktech.vntnumberpickerpreference` with your application package name. You may move the declaration of the custom resource id directly in your `PreferenceScreen` tag, below the android declaration, to make it accessible globally.
-
-Also you need a file under `res/values` called `attrs.xml` with the following content:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="VNTNumberPickerPreference">
-        <attr name="minValue" format="integer" />
-        <attr name="maxValue" format="integer" />
-    </declare-styleable>
-</resources>
+```groovy
+include ':vntnumberpickerpreference'
+project(':vntnumberpickerpreference').projectDir = new File(settingsDir, '/path/VNTNumberPickerPreference/library')
 ```
 
-Afterwards you are good to go and can run your project!
+**build.gradle**
+
+```groovy
+dependencies {
+    compile project(':vntnumberpickerpreference')
+}
+```
+
+Go to your preference XML file and insert the above mentioned XML tag. Afterwards you are good to go and can run your project!
 
 # Get font size
 
 ```java
-final SharedPreferences sharedPreferences = 
-    PreferenceManager.getDefaultSharedPreferences(this);
-final int fonftSize = sharedPreferences.getInt(
-    "preference_font_size", 
-    this.getResources().getInteger(R.integer.font_size_default_value));
+final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+final int fonftSize = sharedPreferences.getInt("preference_font_size", this.getResources().getInteger(R.integer.font_size_default_value));
 ```
 
 # Preview
 
-![Image of VNTNumberPickerPreference](res/drawable/preview.png)
+![Image of VNTNumberPickerPreference](app/src/main/res/drawable/preview.png)
 
 # License
 

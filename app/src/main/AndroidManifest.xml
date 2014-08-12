@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vanniktech.vntnumberpickerpreference"
+    package="com.vanniktech.vntnumberpickerpreference.sample"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.vanniktech.vntnumberpickerpreference.MainActivity"
+            android:name="com.vanniktech.vntnumberpickerpreference.sample.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
         </activity>
         <activity
             android:name="SettingsActivity"
-            android:parentActivityName="com.vanniktech.vntnumberpickerpreference.MainActivity" >
+            android:parentActivityName="com.vanniktech.vntnumberpickerpreference.sample.MainActivity" >
         </activity>
     </application>
 

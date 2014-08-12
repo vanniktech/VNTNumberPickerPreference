@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:speedreader="http://schemas.android.com/apk/res/com.vanniktech.vntnumberpickerpreference" >
+    xmlns:speedreader="http://schemas.android.com/apk/res-auto" >
 
     <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
         android:defaultValue="@integer/font_size_default_value"

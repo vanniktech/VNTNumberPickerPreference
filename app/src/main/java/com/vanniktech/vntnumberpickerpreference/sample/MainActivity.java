@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.vanniktech.vntnumberpickerpreference;
+package com.vanniktech.vntnumberpickerpreference.sample;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
