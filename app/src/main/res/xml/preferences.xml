@@ -7,7 +7,9 @@
         android:key="preference_font_size"
         android:title="@string/font_size"
         speedreader:maxValue="@integer/font_size_max_value"
-        speedreader:minValue="@integer/font_size_min_value" />
+        speedreader:minValue="@integer/font_size_min_value"
+        speedreader:setWrapSelectorWheel="true"/>
+
     <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
         android:defaultValue="180"
         android:key="preference_body_size"
