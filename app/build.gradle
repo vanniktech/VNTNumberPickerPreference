@@ -2,7 +2,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "20.0.0"
+    buildToolsVersion "21.1.1"
 
     defaultConfig {
         applicationId "com.vanniktech.vntnumberpickerpreference.sample"
@@ -12,9 +12,8 @@ android {
 
     buildTypes {
         release {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'        }
     }
 }
 
