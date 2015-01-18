@@ -27,68 +27,68 @@ import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 
 public class VNTNumberPickerPreference extends DialogPreference {
-	private static final int MIN_VALUE = 0;
-	private static final int MAX_VALUE = 100;
+    private static final int     MIN_VALUE           = 0;
+    private static final int     MAX_VALUE           = 100;
     private static final boolean WRAP_SELECTOR_WHEEL = false;
 
-	private int mSelectedValue;
-	private final int mMinValue;
-	private final int mMaxValue;
-    private final boolean mWrapSelectorWheel;
-	private NumberPicker mNumberPicker;
+    private int                  mSelectedValue;
+    private final int            mMinValue;
+    private final int            mMaxValue;
+    private final boolean        mWrapSelectorWheel;
+    private NumberPicker         mNumberPicker;
 
-	public VNTNumberPickerPreference(final Context context, final AttributeSet attrs) {
-		super(context, attrs);
+    public VNTNumberPickerPreference(final Context context, final AttributeSet attrs) {
+        super(context, attrs);
 
-		final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.VNTNumberPickerPreference);
+        final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.VNTNumberPickerPreference);
 
-		mMinValue = a.getInt(R.styleable.VNTNumberPickerPreference_minValue, VNTNumberPickerPreference.MIN_VALUE);
-		mMaxValue = a.getInt(R.styleable.VNTNumberPickerPreference_maxValue, VNTNumberPickerPreference.MAX_VALUE);
+        mMinValue = a.getInt(R.styleable.VNTNumberPickerPreference_minValue, VNTNumberPickerPreference.MIN_VALUE);
+        mMaxValue = a.getInt(R.styleable.VNTNumberPickerPreference_maxValue, VNTNumberPickerPreference.MAX_VALUE);
         mWrapSelectorWheel = a.getBoolean(R.styleable.VNTNumberPickerPreference_setWrapSelectorWheel, VNTNumberPickerPreference.WRAP_SELECTOR_WHEEL);
 
-		a.recycle();
-	}
+        a.recycle();
+    }
 
-	@Override
-	protected void onSetInitialValue(final boolean restoreValue, final Object defaultValue) {
-		mSelectedValue = restoreValue ? this.getPersistedInt(0) : (Integer) defaultValue;
-		this.updateSummary();
-	}
+    @Override
+    protected void onSetInitialValue(final boolean restoreValue, final Object defaultValue) {
+        mSelectedValue = restoreValue ? this.getPersistedInt(0) : (Integer) defaultValue;
+        this.updateSummary();
+    }
 
-	@Override
-	protected Object onGetDefaultValue(final TypedArray a, final int index) {
-		return a.getInteger(index, 0);
-	}
+    @Override
+    protected Object onGetDefaultValue(final TypedArray a, final int index) {
+        return a.getInteger(index, 0);
+    }
 
-	@Override
-	protected void onPrepareDialogBuilder(final Builder builder) {
-		super.onPrepareDialogBuilder(builder);
+    @Override
+    protected void onPrepareDialogBuilder(final Builder builder) {
+        super.onPrepareDialogBuilder(builder);
 
-		mNumberPicker = new NumberPicker(this.getContext());
-		mNumberPicker.setMinValue(mMinValue);
-		mNumberPicker.setMaxValue(mMaxValue);
-		mNumberPicker.setValue(mSelectedValue);
+        mNumberPicker = new NumberPicker(this.getContext());
+        mNumberPicker.setMinValue(mMinValue);
+        mNumberPicker.setMaxValue(mMaxValue);
+        mNumberPicker.setValue(mSelectedValue);
         mNumberPicker.setWrapSelectorWheel(mWrapSelectorWheel);
-		mNumberPicker.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        mNumberPicker.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 
-		final LinearLayout linearLayout = new LinearLayout(this.getContext());
-		linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-		linearLayout.setGravity(Gravity.CENTER);
-		linearLayout.addView(mNumberPicker);
+        final LinearLayout linearLayout = new LinearLayout(this.getContext());
+        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        linearLayout.setGravity(Gravity.CENTER);
+        linearLayout.addView(mNumberPicker);
 
-		builder.setView(linearLayout);
-	}
+        builder.setView(linearLayout);
+    }
 
-	@Override
-	protected void onDialogClosed(final boolean positiveResult) {
-		if (positiveResult && this.shouldPersist()) {
-			mSelectedValue = mNumberPicker.getValue();
-			this.persistInt(mSelectedValue);
-			this.updateSummary();
-		}
-	}
+    @Override
+    protected void onDialogClosed(final boolean positiveResult) {
+        if (positiveResult && this.shouldPersist()) {
+            mSelectedValue = mNumberPicker.getValue();
+            this.persistInt(mSelectedValue);
+            this.updateSummary();
+        }
+    }
 
-	private void updateSummary() {
-		super.setSummary(super.getTitle() + " " + mSelectedValue);
-	}
+    private void updateSummary() {
+        super.setSummary(super.getTitle() + " " + mSelectedValue);
+    }
 }

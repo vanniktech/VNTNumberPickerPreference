@@ -11,7 +11,7 @@ This is an easy to use custom preference, which opens a dialog with a number pic
     android:title="@string/font_size"
     vntnumberpickerpreference:maxValue="@integer/font_size_max_value"
     vntnumberpickerpreference:minValue="@integer/font_size_min_value"
-		vntnumberpickerpreference:setWrapSelectorWheel="true"/>
+	vntnumberpickerpreference:setWrapSelectorWheel="true"/>
 ```
 
 # Setup
