@@ -1,0 +1,15 @@
+language: android
+android:
+  components:
+    - build-tools-21.1.1
+    - tools
+    - android-19
+    #- system-image
+    - extra-android-support
+  licenses:
+    - 'android-sdk-license-.+'
+#before_script:
+    #- echo no | android create avd --force -n test -t android-19 --abi default/armeabi-v7a
+    #- emulator -avd test -no-skin -no-audio -no-window &
+    #- android-wait-for-emulator
+script: ./gradlew build
