@@ -46,6 +46,6 @@ final int fonftSize = sharedPreferences.getInt("preference_font_size", this.getR
 
 # License
 
-Copyright (c) 2014 Niklas Baudy
+Copyright (c) 2014-2015 Niklas Baudy
 
 Licensed under the Apache License, Version 2.0
