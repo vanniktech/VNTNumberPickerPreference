@@ -26,3 +26,14 @@ proguard/
 .idea
 .gradle
 build/
+*.iml
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Eclipse project files
+.classpath
+.project
