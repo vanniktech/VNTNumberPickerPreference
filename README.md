@@ -19,18 +19,15 @@ This is an easy to use custom preference, which opens a dialog with a number pic
 
 # Setup
 
-**settings.gradle**
-
-```groovy
-include ':vntnumberpickerpreference'
-project(':vntnumberpickerpreference').projectDir = new File(settingsDir, '/path/VNTNumberPickerPreference/library')
-```
-
 **build.gradle**
 
 ```groovy
+repositories {
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
 dependencies {
-    compile project(':vntnumberpickerpreference')
+    compile 'com.vanniktech:vntnumberpickerpreference:0.1.0-SNAPSHOT'
 }
 ```
 
