@@ -2,6 +2,8 @@ VNTNumberPickerPreference
 =========================
 
 [![Build Status](https://travis-ci.org/vanniktech/VNTNumberPickerPreference.svg)](https://travis-ci.org/vanniktech/VNTNumberPickerPreference)
+[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-VNTNumberPickerPreference-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/799)
 
 This is an easy to use custom preference, which opens a dialog with a number picker. The value gets automatically saved and you can set the default-, min- and maxValue conveniently in the XML.
