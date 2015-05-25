@@ -89,6 +89,6 @@ public class VNTNumberPickerPreference extends DialogPreference {
     }
 
     private void updateSummary() {
-        super.setSummary(super.getTitle() + " " + mSelectedValue);
+        super.setSummary(Integer.toString(mSelectedValue));
     }
 }
