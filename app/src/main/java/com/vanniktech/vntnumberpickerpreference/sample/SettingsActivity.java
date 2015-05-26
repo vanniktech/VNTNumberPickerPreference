@@ -1,12 +1,12 @@
 /*
  * Copyright (C) 2014-2015 Vanniktech - Niklas Baudy <http://vanniktech.de/Imprint>
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,17 +19,28 @@ package com.vanniktech.vntnumberpickerpreference.sample;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
+import android.support.v7.app.AppCompatActivity;
 
-public class SettingsActivity extends PreferenceActivity {
-	public static Intent start(final Activity activity) {
-		return new Intent(activity, SettingsActivity.class);
-	}
+public class SettingsActivity extends AppCompatActivity {
+    public static Intent start(final Activity activity) {
+        return new Intent(activity, SettingsActivity.class);
+    }
 
-	@SuppressWarnings ("deprecation")
-	@Override
-	public void onCreate(final Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		this.addPreferencesFromResource(R.xml.preferences);
-	}
+    @Override
+    public void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        this.setContentView(R.layout.frame_layout);
+        this.getFragmentManager().beginTransaction().replace(R.id.content_frame, new SettingsFragment()).commit();
+    }
+
+    public static class SettingsFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(final Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            this.addPreferencesFromResource(R.xml.preferences);
+        }
+    }
 }
