@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.vanniktech:vntnumberpickerpreference:0.1.0-SNAPSHOT'
+    compile 'com.vanniktech:vntnumberpickerpreference:0.1.1-SNAPSHOT'
 }
 ```
 
