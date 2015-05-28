@@ -28,6 +28,8 @@ or scan the code on your mobile
 
 ![Google Play QR link](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vanniktech.vntnumberpickerpreference.sample&qzone=1&margin=0&size=150x150&ecc=L)
 
+or download it [directly](sample.apk)
+
 # Setup
 
 **build.gradle**

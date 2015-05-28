@@ -37,3 +37,6 @@ Thumbs.db
 # Eclipse project files
 .classpath
 .project
+
+# Don't ignore sample.apk
+!sample.apk
