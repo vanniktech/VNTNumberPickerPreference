@@ -51,7 +51,8 @@ public class VNTNumberPickerPreference extends DialogPreference {
 
     @Override
     protected void onSetInitialValue(final boolean restoreValue, final Object defaultValue) {
-        mSelectedValue = restoreValue ? this.getPersistedInt(0) : (Integer) defaultValue;
+        final int intDefaultValue = (Integer) defaultValue;
+        mSelectedValue = restoreValue ? this.getPersistedInt(intDefaultValue) : intDefaultValue;
         this.updateSummary();
     }
 
@@ -89,6 +90,6 @@ public class VNTNumberPickerPreference extends DialogPreference {
     }
 
     private void updateSummary() {
-        this.setSummary(Integer.toString(mSelectedValue));
+        this.setSummary(String.valueOf(mSelectedValue));
     }
 }
