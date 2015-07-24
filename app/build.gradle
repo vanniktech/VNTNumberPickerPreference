@@ -17,7 +17,7 @@ android {
         versionName "1.0.1"
     }
 
-    def shouldSign = hasProperty('RELEASE_STORE_FILE') && hasProperty('RELEASE_STORE_PASSWORD') && hasProperty('RELEASE_KEY_ALIAS') && hasProperty('RELEASE_KEY_PASSWORD')
+    def shouldSign = project.hasProperty('RELEASE_STORE_FILE') && project.hasProperty('RELEASE_STORE_PASSWORD') && project.hasProperty('RELEASE_KEY_ALIAS') && project.hasProperty('RELEASE_KEY_PASSWORD')
 
     if (shouldSign) {
         signingConfigs {
