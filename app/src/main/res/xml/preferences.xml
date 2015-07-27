@@ -17,4 +17,11 @@
         speedreader:maxValue="250"
         speedreader:minValue="40"/>
 
+    <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
+        android:defaultValue="1"
+        android:key="preference_callback"
+        android:title="Callback"
+        speedreader:maxValue="10"
+        speedreader:minValue="0"/>
+
 </PreferenceScreen>

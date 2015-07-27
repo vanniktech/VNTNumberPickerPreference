@@ -51,7 +51,7 @@ public class VNTNumberPickerPreference extends DialogPreference {
 
     @Override
     protected void onSetInitialValue(final boolean restoreValue, final Object defaultValue) {
-        final int intDefaultValue = (Integer) defaultValue;
+        final int intDefaultValue = defaultValue instanceof Integer ? (int) defaultValue : mMinValue;
         mSelectedValue = restoreValue ? this.getPersistedInt(intDefaultValue) : intDefaultValue;
         this.updateSummary();
     }
@@ -82,10 +82,15 @@ public class VNTNumberPickerPreference extends DialogPreference {
 
     @Override
     protected void onDialogClosed(final boolean positiveResult) {
-        if (positiveResult && this.shouldPersist()) {
-            mSelectedValue = mNumberPicker.getValue();
-            this.persistInt(mSelectedValue);
-            this.updateSummary();
+        super.onDialogClosed(positiveResult);
+
+        mSelectedValue = mNumberPicker.getValue();
+
+        if (positiveResult) {
+            if (this.callChangeListener(mSelectedValue)) {
+                this.persistInt(mSelectedValue);
+                this.updateSummary();
+            }
         }
     }
 
