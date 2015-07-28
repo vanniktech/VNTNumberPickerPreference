@@ -18,6 +18,7 @@ package com.vanniktech.vntnumberpickerpreference.sample;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -37,8 +38,9 @@ public class SettingsActivity extends AppCompatActivity {
         this.getFragmentManager().beginTransaction().replace(R.id.content_frame, new SettingsFragment()).commit();
     }
 
-    public static class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
+    public static class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, SharedPreferences.OnSharedPreferenceChangeListener {
         private Preference mPreferenceCallback;
+        private Preference mPreferenceCustomSummary;
 
         @Override
         public void onCreate(final Bundle savedInstanceState) {
@@ -48,6 +50,9 @@ public class SettingsActivity extends AppCompatActivity {
 
             mPreferenceCallback = this.findPreference("preference_callback");
             mPreferenceCallback.setOnPreferenceChangeListener(this);
+
+            mPreferenceCustomSummary = this.findPreference("preference_custom_summary");
+            this.getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
         }
 
         @Override
@@ -59,6 +64,14 @@ public class SettingsActivity extends AppCompatActivity {
             }
 
             return false;
+        }
+
+        @Override
+        public void onSharedPreferenceChanged(final SharedPreferences sharedPreferences, final String key) {
+            if (key.equals(mPreferenceCustomSummary.getKey())) {
+                final int value = sharedPreferences.getInt(key, 0);
+                mPreferenceCustomSummary.setSummary("My custom summary text. Value is " + value);
+            }
         }
     }
 }

@@ -90,8 +90,8 @@ public class VNTNumberPickerPreference extends DialogPreference {
             if (this.callChangeListener(selectedValue)) {
                 mSelectedValue = selectedValue;
 
-                this.persistInt(mSelectedValue);
                 this.updateSummary();
+                this.persistInt(mSelectedValue);
             }
         }
     }

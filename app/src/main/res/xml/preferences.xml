@@ -24,4 +24,11 @@
         speedreader:maxValue="10"
         speedreader:minValue="0"/>
 
+    <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
+        android:defaultValue="10"
+        android:key="preference_custom_summary"
+        android:title="Custom summary"
+        speedreader:maxValue="100"
+        speedreader:minValue="0"/>
+
 </PreferenceScreen>
