@@ -6,29 +6,29 @@
         android:defaultValue="@integer/font_size_default_value"
         android:key="preference_font_size"
         android:title="@string/font_size"
-        speedreader:maxValue="@integer/font_size_max_value"
-        speedreader:minValue="@integer/font_size_min_value"
-        speedreader:setWrapSelectorWheel="true"/>
+        speedreader:vnt_maxValue="@integer/font_size_max_value"
+        speedreader:vnt_minValue="@integer/font_size_min_value"
+        speedreader:vnt_setWrapSelectorWheel="true"/>
 
     <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
         android:defaultValue="180"
         android:key="preference_body_size"
         android:title="@string/body_size"
-        speedreader:maxValue="250"
-        speedreader:minValue="40"/>
+        speedreader:vnt_maxValue="250"
+        speedreader:vnt_minValue="40"/>
 
     <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
         android:defaultValue="1"
         android:key="preference_callback"
         android:title="Callback"
-        speedreader:maxValue="10"
-        speedreader:minValue="0"/>
+        speedreader:vnt_maxValue="10"
+        speedreader:vnt_minValue="0"/>
 
     <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
         android:defaultValue="10"
         android:key="preference_custom_summary"
         android:title="Custom summary"
-        speedreader:maxValue="100"
-        speedreader:minValue="0"/>
+        speedreader:vnt_maxValue="100"
+        speedreader:vnt_minValue="0"/>
 
 </PreferenceScreen>
