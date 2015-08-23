@@ -13,8 +13,8 @@ android {
         applicationId "com.vanniktech.vntnumberpickerpreference.sample"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 6
+        versionName "1.0.5"
     }
 
     def shouldSign = project.hasProperty('RELEASE_STORE_FILE') && project.hasProperty('RELEASE_STORE_PASSWORD') && project.hasProperty('RELEASE_KEY_ALIAS') && project.hasProperty('RELEASE_KEY_PASSWORD')
