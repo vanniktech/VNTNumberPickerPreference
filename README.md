@@ -56,7 +56,7 @@ final int fonftSize = sharedPreferences.getInt("preference_font_size", this.getR
 
 # Preview
 
-![Image of VNTNumberPickerPreference](app/src/main/res/drawable/preview.png)
+<img src="app/src/main/res/drawable/preview.png" alt="Image of VNTNumberPickerPreference" width="320">
 
 # License
 
