@@ -54,6 +54,10 @@ final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPr
 final int fonftSize = sharedPreferences.getInt("preference_font_size", this.getResources().getInteger(R.integer.font_size_default_value));
 ```
 
+# Proguard
+
+No configuration needed.
+
 # Preview
 
 <img src="app/src/main/res/drawable/preview.png" alt="Image of VNTNumberPickerPreference" width="320">
