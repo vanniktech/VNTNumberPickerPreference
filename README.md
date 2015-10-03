@@ -21,7 +21,7 @@ This is an easy to use custom preference, which opens a dialog with a number pic
     vntnumberpickerpreference:vnt_setWrapSelectorWheel="true"/>
 ```
 
-# Download
+# Download Sample App
 
 [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.vanniktech.vntnumberpickerpreference.sample)
 
