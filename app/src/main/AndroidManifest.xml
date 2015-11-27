@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.vanniktech.vntnumberpickerpreference.sample"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.vanniktech.vntnumberpickerpreference.sample"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:name=".VNTNumberPickerPreferenceApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.vanniktech.vntnumberpickerpreference.sample.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,7 +23,11 @@
         </activity>
         <activity
             android:name="SettingsActivity"
-            android:parentActivityName="com.vanniktech.vntnumberpickerpreference.sample.MainActivity">
+            android:parentActivityName=".MainActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
     </application>
 
