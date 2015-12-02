@@ -37,11 +37,11 @@ or download it [directly](sample.apk)
 
 ```groovy
 repositories {
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { mavenCentral() }
 }
 
 dependencies {
-    compile 'com.vanniktech:vntnumberpickerpreference:0.2.0-SNAPSHOT'
+    compile 'com.vanniktech:vntnumberpickerpreference:1.0.0'
 }
 ```
 
