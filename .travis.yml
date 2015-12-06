@@ -19,6 +19,14 @@ install: true
 
 script: ./gradlew clean build
 
+after_success:
+    - .buildscript/deploy_snapshot.sh
+
+env:
+    global:
+        - secure: "q4zX1iPp19XKbkbj3SHQVas+mHAHaowMWyJmVmbm4uPdTZI8Au/Q8+S4peVTp4IAgq0rFUvILDU6qWffl0+Cp4CGH9sIQALyzN1P3DUt9FGt2svCr0OjR2kcX6xdV//ncyTr5Z49uFwH7Fjmg9vXts/xNbwMnBed77Rn9RDpwJo="
+        - secure: "zRgnhwOMHJEPNCKmIxp1ESl6kLKTwHmcIJV9EIkVBIArR+jp/n/lD32fJlPo9N2oaAmXKzMyVE2XSBGTWF17bmdwqQ6BgaTUcRJBnRwNAzDRGIwPYFMOS0KPPHKamezwv46y/vdA0bOA3t7Sax+L6xZbZzf2YrhJk0GMSDl+vy4="
+
 branches:
     except:
         - gh-pages
