@@ -27,6 +27,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int DEFAULT_BODY_SIZE = 180;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         final TextView bodySizeTextView = (TextView) this.findViewById(R.id.body_size);
         bodySizeTextView.setTextSize(sharedPreferences.getInt("preference_font_size", this.getResources().getInteger(R.integer.font_size_default_value)));
-        bodySizeTextView.setText(this.getString(R.string.body_size).concat(" - " + String.valueOf(sharedPreferences.getInt("preference_body_size", 180))));
+        bodySizeTextView.setText(this.getString(R.string.body_size).concat(" - " + sharedPreferences.getInt("preference_body_size", DEFAULT_BODY_SIZE)));
     }
 
     @Override
