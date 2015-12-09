@@ -84,7 +84,7 @@ public class VNTNumberPickerPreference extends DialogPreference {
     protected void onDialogClosed(final boolean positiveResult) {
         super.onDialogClosed(positiveResult);
 
-        if (positiveResult) {
+        if (positiveResult && mNumberPicker != null) {
             final int selectedValue = mNumberPicker.getValue();
 
             if (this.callChangeListener(selectedValue)) {

@@ -57,7 +57,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         @Override
         public boolean onPreferenceChange(final Preference preference, final Object newValue) {
-            if (mPreferenceCallback == preference) {
+            if (preference.equals(mPreferenceCallback)) {
                 final int value = (int) newValue;
                 Toast.makeText(getActivity(), "New value is " + value, Toast.LENGTH_SHORT).show();
                 return true;
@@ -68,7 +68,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         @Override
         public void onSharedPreferenceChanged(final SharedPreferences sharedPreferences, final String key) {
-            if (key.equals(mPreferenceCustomSummary.getKey())) {
+            if (mPreferenceCustomSummary != null && key.equals(mPreferenceCustomSummary.getKey())) {
                 final int value = sharedPreferences.getInt(key, 0);
                 mPreferenceCustomSummary.setSummary("My custom summary text. Value is " + value);
             }
