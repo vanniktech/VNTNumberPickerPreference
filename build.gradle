@@ -2,11 +2,14 @@ apply plugin: 'com.github.ben-manes.versions'
 
 buildscript {
     repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+
+        classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.8'
     }
 }
 
@@ -17,6 +20,8 @@ subprojects {
 
     group = GROUP
     version = VERSION_NAME
+
+    plugins.apply('net.ltgt.errorprone')
 
     plugins.apply('pmd')
 
