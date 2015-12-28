@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="UnusedResources">
+        <ignore regexp="library_vntnumberpickerpreference_strings.xml"/>
+    </issue>
+</lint>
