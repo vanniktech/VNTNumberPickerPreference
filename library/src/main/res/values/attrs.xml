@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="VNTNumberPickerPreference">
+    <declare-styleable name="vnt_NumberPickerPreference">
         <attr name="vnt_minValue" format="integer"/>
         <attr name="vnt_maxValue" format="integer"/>
         <attr name="vnt_setWrapSelectorWheel" format="boolean"/>

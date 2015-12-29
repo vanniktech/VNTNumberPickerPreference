@@ -40,11 +40,11 @@ public class VNTNumberPickerPreference extends DialogPreference {
     public VNTNumberPickerPreference(final Context context, final AttributeSet attrs) {
         super(context, attrs);
 
-        final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.VNTNumberPickerPreference);
+        final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.vnt_NumberPickerPreference);
 
-        mMinValue = a.getInt(R.styleable.VNTNumberPickerPreference_vnt_minValue, VNTNumberPickerPreference.MIN_VALUE);
-        mMaxValue = a.getInt(R.styleable.VNTNumberPickerPreference_vnt_maxValue, VNTNumberPickerPreference.MAX_VALUE);
-        mWrapSelectorWheel = a.getBoolean(R.styleable.VNTNumberPickerPreference_vnt_setWrapSelectorWheel, VNTNumberPickerPreference.WRAP_SELECTOR_WHEEL);
+        mMinValue = a.getInt(R.styleable.vnt_NumberPickerPreference_vnt_minValue, VNTNumberPickerPreference.MIN_VALUE);
+        mMaxValue = a.getInt(R.styleable.vnt_NumberPickerPreference_vnt_maxValue, VNTNumberPickerPreference.MAX_VALUE);
+        mWrapSelectorWheel = a.getBoolean(R.styleable.vnt_NumberPickerPreference_vnt_setWrapSelectorWheel, VNTNumberPickerPreference.WRAP_SELECTOR_WHEEL);
 
         a.recycle();
     }

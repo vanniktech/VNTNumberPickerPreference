@@ -3,4 +3,8 @@
     <issue id="UnusedResources">
         <ignore regexp="library_vntnumberpickerpreference_strings.xml"/>
     </issue>
+
+    <issue id="ResourceName">
+        <ignore regexp="library_vntnumberpickerpreference_strings.xml"/>
+    </issue>
 </lint>
