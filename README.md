@@ -37,7 +37,7 @@ or download it [directly](sample.apk)
 
 ```groovy
 repositories {
-    maven { mavenCentral() }
+    mavenCentral()
 }
 
 dependencies {
