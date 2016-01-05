@@ -36,14 +36,11 @@ or download it [directly](sample.apk)
 **build.gradle**
 
 ```groovy
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile 'com.vanniktech:vntnumberpickerpreference:1.0.0'
-}
+compile 'com.vanniktech:vntnumberpickerpreference:1.0.0'
+compile 'com.vanniktech:vntnumberpickerpreference:1.0.1-SNAPSHOT'
 ```
+
+Modules are located on [Maven Central](https://oss.sonatype.org/#nexus-search;quick~vntnumberpickerpreference).
 
 Go to your preference XML file and insert the above mentioned XML tag. Afterwards you are good to go and can run your project!
 
