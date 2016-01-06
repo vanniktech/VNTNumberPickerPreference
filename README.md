@@ -12,13 +12,12 @@ This is an easy to use custom preference, which opens a dialog with a number pic
 
 ```xml
 <com.vanniktech.vntnumberpickerpreference.VNTNumberPickerPreference
-    xmlns:vntnumberpickerpreference="http://schemas.android.com/apk/res-auto"
     android:defaultValue="@integer/font_size_default_value"
     android:key="preference_font_size"
     android:title="@string/font_size"
-    vntnumberpickerpreference:vnt_maxValue="@integer/font_size_max_value"
-    vntnumberpickerpreference:vnt_minValue="@integer/font_size_min_value"
-    vntnumberpickerpreference:vnt_setWrapSelectorWheel="true"/>
+    app:vnt_maxValue="@integer/font_size_max_value"
+    app:vnt_minValue="@integer/font_size_min_value"
+    app:vnt_setWrapSelectorWheel="true"/>
 ```
 
 # Download Sample App
