@@ -1,15 +1,17 @@
 apply plugin: 'com.github.ben-manes.versions'
+apply plugin: 'com.vanniktech.code.quality.tools'
 
 buildscript {
     repositories {
-        maven { url 'https://plugins.gradle.org/m2/' }
+        mavenCentral()
         jcenter()
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
-
         classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.8'
+        classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.1.0'
     }
 }
 
@@ -22,64 +24,6 @@ subprojects {
     version = VERSION_NAME
 
     plugins.apply('net.ltgt.errorprone')
-
-    plugins.apply('pmd')
-
-    pmd {
-        toolVersion = '5.4.1'
-    }
-
-    task pmd(type: Pmd) {
-        ignoreFailures = false
-        ruleSetFiles = project.files(rootProject.file("code_quality_tools/pmd.xml"))
-        ruleSets = []
-
-        source = fileTree('src/main/java')
-    }
-
-    plugins.apply('findbugs')
-
-    task findbugs(type: FindBugs) {
-        ignoreFailures = false
-        effort = 'max'
-        reportLevel = 'low'
-
-        classes = files("${project.projectDir}/build/intermediates/classes")
-        source = fileTree('src/main/java')
-
-        classpath = files()
-
-        excludeFilter = rootProject.file('code_quality_tools/findbugs-filter.xml')
-    }
-
-    plugins.apply('checkstyle')
-
-    checkstyle {
-        toolVersion = '6.13'
-    }
-
-    task checkstyle(type: Checkstyle) {
-        configFile rootProject.file('code_quality_tools/checkstyle.xml')
-
-        ignoreFailures false
-        showViolations true
-
-        source 'src'
-        include '**/*.java'
-
-        classpath = files()
-    }
-
-    afterEvaluate {
-        tasks.findByName('pmd').dependsOn('assemble')
-        tasks.findByName('findbugs').dependsOn('assemble')
-
-        def checkTask = tasks.findByName('check')
-
-        checkTask.dependsOn('pmd')
-        checkTask.dependsOn('findbugs')
-        checkTask.dependsOn('checkstyle')
-    }
 }
 
 ext {
