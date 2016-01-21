@@ -56,7 +56,7 @@ No configuration needed.
 
 # Preview
 
-<img src="app/src/main/res/drawable/preview.png" alt="Image of VNTNumberPickerPreference" width="320">
+<img src="app/src/main/res/drawable-nodpi/preview.png" alt="Image of VNTNumberPickerPreference" width="320">
 
 # License
 
