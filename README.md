@@ -3,6 +3,8 @@ VNTNumberPickerPreference
 
 [![Build Status](https://travis-ci.org/vanniktech/VNTNumberPickerPreference.svg)](https://travis-ci.org/vanniktech/VNTNumberPickerPreference)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
+<a href="http://www.methodscount.com/?lib=com.vanniktech%3Avntnumberpickerpreference%3A1.0.0"><img src="https://img.shields.io/badge/Methods count-37-e91e63.svg"></img></a>
+<a href="http://www.methodscount.com/?lib=com.vanniktech%3Avntnumberpickerpreference%3A1.0.0"><img src="https://img.shields.io/badge/Size-5 KB-e91e63.svg"></img></a>
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-VNTNumberPickerPreference-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/799)
 [![Jit Pack](https://img.shields.io/github/tag/vanniktech/VNTNumberPickerPreference.svg?label=JitPack%20Maven)](https://jitpack.io/#vanniktech/VNTNumberPickerPreference)
