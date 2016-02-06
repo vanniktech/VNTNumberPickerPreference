@@ -180,18 +180,23 @@
         </module>
 
         <module name="RegexpSinglelineJava">
-           <property name="format" value="(final)?\s*[\w]+ a[A-Z]{1}[\w]+"/>
+           <property name="format" value="(final)?\s*[\w]+\s+a[A-Z]{1}[\w]+"/>
            <property name="message" value="aVariable notation is deprecated and should be variable instead"/>
         </module>
 
         <module name="RegexpSinglelineJava">
-           <property name="format" value="(final)?\s*[\w]+ an[A-Z]{1}[\w]+"/>
+           <property name="format" value="(final)?\s*[\w]+\s+an[A-Z]{1}[\w]+"/>
            <property name="message" value="anAwfulVariable notation is deprecated and should be variable instead"/>
         </module>
 
         <module name="RegexpSinglelineJava">
-           <property name="format" value="(final)?\s*[\w]+ p[A-Z]{1}[\w]+"/>
+           <property name="format" value="(final)?\s*[\w]+\s+p[A-Z]{1}[\w]+"/>
            <property name="message" value="pVariable notation is deprecated"/>
+        </module>
+
+        <module name="RegexpSinglelineJava">
+           <property name="format" value="(final)?\s*[\w]+\s+m[A-Z]{1}[\w]+"/>
+           <property name="message" value="Say no to mVariable"/>
         </module>
 
         <module name="RegexpSinglelineJava">

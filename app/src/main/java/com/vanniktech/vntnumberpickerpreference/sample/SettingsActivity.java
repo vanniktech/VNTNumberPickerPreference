@@ -23,8 +23,8 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public static class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, SharedPreferences.OnSharedPreferenceChangeListener {
-        private Preference mPreferenceCallback;
-        private Preference mPreferenceCustomSummary;
+        private Preference preferenceCallback;
+        private Preference preferenceCustomSummary;
 
         @Override
         public void onCreate(final Bundle savedInstanceState) {
@@ -32,16 +32,16 @@ public class SettingsActivity extends AppCompatActivity {
 
             this.addPreferencesFromResource(R.xml.preferences);
 
-            mPreferenceCallback = this.findPreference("preference_callback");
-            mPreferenceCallback.setOnPreferenceChangeListener(this);
+            preferenceCallback = this.findPreference("preference_callback");
+            preferenceCallback.setOnPreferenceChangeListener(this);
 
-            mPreferenceCustomSummary = this.findPreference("preference_custom_summary");
+            preferenceCustomSummary = this.findPreference("preference_custom_summary");
             this.getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
         }
 
         @Override
         public boolean onPreferenceChange(final Preference preference, final Object newValue) {
-            if (preference.equals(mPreferenceCallback)) {
+            if (preference.equals(preferenceCallback)) {
                 final int value = (int) newValue;
                 Toast.makeText(getActivity(), "New value is " + value, Toast.LENGTH_SHORT).show();
                 return true;
@@ -52,9 +52,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         @Override
         public void onSharedPreferenceChanged(final SharedPreferences sharedPreferences, final String key) {
-            if (mPreferenceCustomSummary != null && key.equals(mPreferenceCustomSummary.getKey())) {
+            if (preferenceCustomSummary != null && key.equals(preferenceCustomSummary.getKey())) {
                 final int value = sharedPreferences.getInt(key, 0);
-                mPreferenceCustomSummary.setSummary("My custom summary text. Value is " + value);
+                preferenceCustomSummary.setSummary("My custom summary text. Value is " + value);
             }
         }
     }
