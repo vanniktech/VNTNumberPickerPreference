@@ -1,7 +1,7 @@
 VNTNumberPickerPreference
 =========================
 
-[![Build Status](https://travis-ci.org/vanniktech/VNTNumberPickerPreference.svg)](https://travis-ci.org/vanniktech/VNTNumberPickerPreference)
+[![Build Status](https://travis-ci.org/vanniktech/VNTNumberPickerPreference.svg?branch=master)](https://travis-ci.org/vanniktech/VNTNumberPickerPreference?branch=master)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 <a href="http://www.methodscount.com/?lib=com.vanniktech%3Avntnumberpickerpreference%3A1.0.0"><img src="https://img.shields.io/badge/Methods count-37-e91e63.svg"></img></a>
 <a href="http://www.methodscount.com/?lib=com.vanniktech%3Avntnumberpickerpreference%3A1.0.0"><img src="https://img.shields.io/badge/Size-5 KB-e91e63.svg"></img></a>
