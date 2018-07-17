@@ -13,16 +13,6 @@ This is an easy to use custom preference, which opens a dialog with a number pic
     app:vnt_setWrapSelectorWheel="true"/>
 ```
 
-# Download Sample App
-
-[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.vanniktech.vntnumberpickerpreference.sample)
-
-or scan the code on your mobile
-
-![Google Play QR link](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vanniktech.vntnumberpickerpreference.sample&qzone=1&margin=0&size=150x150&ecc=L)
-
-or download it [directly](sample.apk)
-
 # Setup
 
 **build.gradle**
@@ -39,8 +29,8 @@ Go to your preference XML file and insert the above mentioned XML tag. Afterward
 # Get font size
 
 ```java
-final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-final int fonftSize = sharedPreferences.getInt("preference_font_size", this.getResources().getInteger(R.integer.font_size_default_value));
+SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+int fonftSize = sharedPreferences.getInt("preference_font_size", getResources().getInteger(R.integer.font_size_default_value));
 ```
 
 # Proguard
